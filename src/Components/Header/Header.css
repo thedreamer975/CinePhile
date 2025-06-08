@@ -1,0 +1,97 @@
+.header {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+/* Center nav in the header */
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  transition: background-color 0.3s, color 0.2s;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+/* Sign In button styling */
+.signin-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.signin-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  background:#0066cc;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.signin-btn:hover {
+  background: #0052a3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+  .nav {
+    gap: 1rem;
+    margin: 0.7rem 0;
+  }
+  .logo img {
+    width: 220px;
+  }
+  .signin-container {
+    display: none;
+  }
+}
+
+@media (max-width:600px){
+  .header{
+    .nav , .signin-container{
+      display: none;
+    }
+  }
+  .logo img{
+    width: 50vw;
+
+  }
+}

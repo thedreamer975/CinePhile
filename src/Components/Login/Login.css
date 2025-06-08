@@ -1,0 +1,178 @@
+/* Login.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #6b7280;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Vertically and horizontally center container on viewport */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Card container */
+.login-popup-container {
+  background: #ffffff;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+/* Header */
+.login-header h2 {
+  font-size: 2.5rem; /* ~40px */
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-inputs input {
+  padding: 1rem 1.25rem;
+  font-size: 1.125rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.75rem;
+  color: #111827;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-inputs input:focus {
+  border-color: #111827;
+  outline: none;
+  box-shadow: 0 0 8px rgba(17, 24, 39, 0.4);
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  border: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+/* Sign In button style: Black background with white text */
+.btn-signin {
+  background-color: #111827;
+  color: white;
+}
+
+.btn-signin:hover,
+.btn-signin:focus {
+  background-color: #000000;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Sign Up button style: white background with black border and black text */
+.btn-signup {
+  background-color: #ffffff;
+  color: #111827;
+  border: 2px solid #111827;
+}
+
+.btn-signup:hover,
+.btn-signup:focus {
+  background-color: #111827;
+  color: white;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Checkbox container */
+.login-popup-condn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #6b7280;
+  text-align: left;
+}
+
+.login-popup-condn input[type="checkbox"] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Checkbox label */
+.login-popup-condn label {
+  cursor: pointer;
+}
+
+/* Footer text and toggle link */
+.login-footer {
+  font-size: 1rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.toggle-link {
+  background: none;
+  border: none;
+  color: #111827;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.toggle-link:hover,
+.toggle-link:focus {
+  color: #000000;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-popup-container {
+    padding: 2rem 1.5rem;
+  }
+  .login-header h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-top: 3rem;
+  height: 65vh;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*OGqgHK1soFSMpjeM8Fq00w.png');
+  background-size: contain;           
+  background-repeat: no-repeat;      
+  background-position: center; 
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;       
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero h1, .hero p, .hero button {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+.hero h1 { animation-delay: 0.2s; }
+.hero p { animation-delay: 0.4s; }
+.hero button { animation-delay: 0.5s; }
+
+.hero-button:hover {
+  background-color: #0052a3;
+}
+
+.latest-movies {
+  padding: 2rem;
+  text-align: center;
+}
+
+.latest-movies h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #0066cc;
+  color: #0066cc;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #0066cc;
+  color: white;
+} 
+.latest-movies-section {
+  padding: 2.5rem 1rem;
+  background: #f9f9fb;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.07);
+  max-width: 1200px;
+  margin: 2.5rem auto;
+}
+
+.latest-movies-title {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #22223b;
+  margin-bottom: 2.5rem;
+}
+
+.latest-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for 3 images */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.latest-movie-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(79,140,255,0.08);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.25s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.latest-movie-card:hover {
+  box-shadow: 0 8px 32px rgba(79,140,255,0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.latest-movie-image-wrapper {
+  position: relative;
+}
+
+.latest-movie-poster {
+  width: 100%;
+  max-width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 2px 12px rgba(34,34,59,0.08);
+  background: #ececec;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.latest-movie-rating {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ffb700;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,183,0,0.12);
+}
+
+.latest-movie-info {
+  padding: 1.2rem 0 0 0;
+}
+
+.latest-movie-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 0.4rem;
+}
+
+.latest-movie-genre {
+  color: #4f8cff;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.latest-movie-duration {
+  font-size: 0.96rem;
+  color: #656580;
+  margin-bottom: 0.2rem;
+}
+
+.latest-movie-book-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #4f8cff 0%, #38cfff 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.latest-movie-book-btn:hover {
+  background: linear-gradient(90deg, #38cfff 0%, #4f8cff 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+
+.latest-movies-explore {
+  text-align: center;
+}
+
+.explore-button {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #4f8cff;
+  color: #4f8cff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.explore-button:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+
+/* Responsive: 2 columns on tablets, 1 on mobile */
+@media (max-width: 900px) {
+  .latest-movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .latest-movies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media  (max-width: 700px) {
+  .hero-content {
+    padding: 1.5rem; /* Reduce padding */
+  }
+  .hero h1 {
+    font-size: 2rem; /* Smaller font size for the heading */
+  }
+  .hero p {
+    font-size: 1rem; /* Smaller font size for the paragraph */
+  }
+  .hero-button {
+    padding: 0.6rem 1.2rem; /* Adjust button padding */
+    font-size: 1rem; /* Smaller font size for the button */
+  }
+}
+@media (max-width: 550px) {
+  .hero-content {
+    padding: 1rem; /* Even less padding for very small screens */
+  }
+  .hero h1 {
+    font-size: 1.3rem; /* Smaller heading */
+  }
+  .hero p {
+    font-size: 0.95rem; /* Smaller paragraph */
+  }
+  .hero-button {
+    padding: 0.5rem 1rem; /* Compact button */
+    font-size: 0.95rem;
+  }
+}
